@@ -22,6 +22,11 @@ public class RadioButtonTest {
  * נאחלונא רנטפעא.
  */
 class RadioButtonFrame extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public RadioButtonFrame() {
 		setTitle("RadioButtonTExt");
 		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);

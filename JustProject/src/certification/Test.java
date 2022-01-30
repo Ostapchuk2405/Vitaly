@@ -1,29 +1,32 @@
 package certification;
 
-//class A {
-//	public A() {
-//		str = "New";
-//	}
-//
-//	public String str;
-//}
-
 public class Test {
-
-	public void print(Object o) {
-		System.out.println("O");
+	public static void main(String args[]) {
+		int[] a = { 1, 2, 3, 4, 5, 6 };
+		int i = a.length - 1;
+		while (i > 0) {
+			System.out.println(a[i]);
+			i--;
+		}
 	}
+}
 
-	public void print(String s) {
-		System.out.println("S");
-	}
+class A {
 
-	public void print(Integer i) {
-		System.out.println("I");
-	}
+}
 
-	public static void main(String[] args) {
-		Test t = new Test();
-		t.print(null);
-	}
+class E {
+
+}
+
+interface B {
+
+}
+
+interface D {
+
+}
+
+interface F extends D {
+
 }
