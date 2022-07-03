@@ -36,7 +36,7 @@ public class ContactSimpleDAO implements ContactDAO {
 	}
 
 	@Override
-	public void daleteContact(Long contactId) {
+	public void deleteContact(Long contactId) {
 		for (Iterator<Contact> it = contacts.iterator(); it.hasNext();) {
 			Contact cnt = it.next();
 			if (cnt.getContactId().equals(contactId)) {

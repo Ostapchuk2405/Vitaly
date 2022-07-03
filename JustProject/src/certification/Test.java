@@ -1,32 +1,15 @@
 package certification;
 
 public class Test {
-	public static void main(String args[]) {
-		int[] a = { 1, 2, 3, 4, 5, 6 };
-		int i = a.length - 1;
-		while (i > 0) {
-			System.out.println(a[i]);
-			i--;
-		}
+	
+	public static void main(String[] args)  {
+		
+	int Integer = 24;
+	char String = 'I';
+	System.out.println(Integer);
+	System.out.println(String);
+
+	
+
 	}
-}
-
-class A {
-
-}
-
-class E {
-
-}
-
-interface B {
-
-}
-
-interface D {
-
-}
-
-interface F extends D {
-
 }

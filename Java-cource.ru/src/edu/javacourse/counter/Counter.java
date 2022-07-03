@@ -2,13 +2,13 @@ package edu.javacourse.counter;
 
 public class Counter {
 
-	private long counter = 0L;
+	private static long counter = 0L;
 
-	public synchronized void increaseCounter() {
-		counter++;
+	public synchronized static long increaseCounter() {
+		return counter++;
 	}
 
-	public long getCounter() {
+	public static long getCounter() {
 		return counter;
 	}
 

@@ -39,6 +39,7 @@ public class MusicPlayer {
 		}
 		mp.show();
 		mp.play();
+		
 		sc.close();
 	}
 }

@@ -4,10 +4,12 @@ import java.util.List;
 
 import edu.javacourse.contact.business.ContactManager;
 import edu.javacourse.contact.entity.Contact;
+import edu.javacourse.contact.exception.ContactBusinessException;
+import edu.javacourse.contact.exception.ContactDaoException;
 
 public class ContactTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ContactBusinessException, ContactDaoException {
 		ContactManager cm = new ContactManager();
 
 		Contact c1 = new Contact("Андрей", "Соколов", "+7-911-890-7766", "sokolov@yandex.ru");

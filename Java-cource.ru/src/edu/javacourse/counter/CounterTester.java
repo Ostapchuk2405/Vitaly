@@ -4,7 +4,7 @@ public class CounterTester {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		Counter counter = new Counter();
+		long counter = Counter.getCounter();
 
 		long time1 = System.currentTimeMillis();
 
@@ -14,7 +14,7 @@ public class CounterTester {
 
 		}
 		Thread.sleep(1000);
-		System.out.println("Counter: " + counter.getCounter());
+		System.out.println("Counter: " + Counter.getCounter());
 
 		long time2 = System.currentTimeMillis();
 

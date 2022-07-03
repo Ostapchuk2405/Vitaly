@@ -1,0 +1,1421 @@
+Manifest-Version: 1.0
+Bundle-Description: Microsoft JDBC Driver for SQL Server.
+Automatic-Module-Name: com.microsoft.sqlserver.jdbc
+Bundle-License: http://www.opensource.org/licenses/mit-license.php
+Bundle-SymbolicName: com.microsoft.sqlserver.mssql-jdbc
+Built-By: bamboo
+Bnd-LastModified: 1628105500112
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Microsoft Corporation
+Import-Package: com.azure.core.credential;resolution:=optional,com.azu
+ re.core.http;resolution:=optional,com.azure.core.http.policy;resoluti
+ on:=optional,com.azure.core.util;resolution:=optional,com.azure.ident
+ ity;resolution:=optional,com.azure.security.keyvault.keys;resolution:
+ =optional,com.azure.security.keyvault.keys.cryptography;resolution:=o
+ ptional,com.azure.security.keyvault.keys.cryptography.models;resoluti
+ on:=optional,com.azure.security.keyvault.keys.models;resolution:=opti
+ onal,com.google.gson;resolution:=optional;version="[2.8,3)",com.micro
+ soft.aad.msal4j;resolution:=optional;version="[1.10,2)",com.microsoft
+ .sqlserver.jdbc.dataclassification,javax.crypto,javax.crypto.spec,jav
+ ax.naming,javax.naming.directory,javax.naming.spi,javax.net,javax.net
+ .ssl,javax.security.auth,javax.security.auth.callback,javax.security.
+ auth.kerberos,javax.security.auth.login,javax.security.auth.x500,java
+ x.sql,javax.transaction.xa,javax.xml.parsers,javax.xml.stream,javax.x
+ ml.transform,javax.xml.transform.dom,javax.xml.transform.sax,javax.xm
+ l.transform.stax,javax.xml.transform.stream,org.antlr.v4.runtime;reso
+ lution:=optional;version="[4.9,5)",org.antlr.v4.runtime.atn;resolutio
+ n:=optional;version="[4.9,5)",org.antlr.v4.runtime.dfa;resolution:=op
+ tional;version="[4.9,5)",org.bouncycastle.jce.provider;resolution:=op
+ tional;version="[1.69,2)",org.bouncycastle.openssl;resolution:=option
+ al;version="[1.69,2)",org.bouncycastle.openssl.jcajce;resolution:=opt
+ ional;version="[1.69,2)",org.ietf.jgss,org.osgi.framework;version="[1
+ .8,2)",org.osgi.service.jdbc;version="[1.0,2)",org.w3c.dom,org.xml.sa
+ x,reactor.core.publisher;resolution:=optional;version="[3.4,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Tool: Bnd-5.1.1.202006162103
+Export-Package: com.microsoft.sqlserver.jdbc;uses:="com.azure.core.cre
+ dential,com.microsoft.aad.msal4j,com.microsoft.sqlserver.jdbc.datacla
+ ssification,javax.naming,javax.naming.spi,javax.security.auth.callbac
+ k,javax.security.auth.login,javax.sql,javax.transaction.xa,microsoft.
+ sql,org.ietf.jgss";version="9.4.0",com.microsoft.sqlserver.jdbc.datac
+ lassification;uses:="com.microsoft.sqlserver.jdbc";version="9.4.0",co
+ m.microsoft.sqlserver.jdbc.osgi;uses:="javax.sql,org.osgi.framework,o
+ rg.osgi.service.jdbc";version="9.4.0",microsoft.sql;version="9.4.0"
+Bundle-Name: Microsoft JDBC Driver for SQL Server
+Bundle-Version: 9.4.0
+Bundle-Activator: com.microsoft.sqlserver.jdbc.osgi.Activator
+Build-Jdk-Spec: 11
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 11.0.6
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerCertificateUtils.class
+SHA-256-Digest: SZLx5ftyvdQkJkFjpAAzMIqGKUYM6Jk4osuDuDe4BvI=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ .class
+SHA-256-Digest: JZfZ/AA8Mxq8B94K4IKEY1+tHXvDXiUa2OWAKKQ7V80=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkRecord$ColumnMetadata.
+ class
+SHA-256-Digest: ee1Bp7SaIvnsBvKw0P0eioU9PTm2ahW/QtfI5Efydt8=
+
+Name: com/microsoft/sqlserver/jdbc/Column.class
+SHA-256-Digest: Bdhiiv3GtnJ5nAx4ZLu0N11A6B45cTPJfB/lGqsMtLI=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $DrainStatus.class
+SHA-256-Digest: T8sCdWqUb41vOE5JR2Wx7yYf1e7TgSMf3/TQOMFqVeU=
+
+Name: com/microsoft/sqlserver/jdbc/JavaType$1.class
+SHA-256-Digest: FgDDm76K9xcGvxq07rIKUa0lHAy62scaABRgD72o0j0=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSetMetaData.class
+SHA-256-Digest: f7avLrIW4d0o157lLpqies0n9GO66kmWLFtAaiKM85Q=
+
+Name: com/microsoft/sqlserver/jdbc/spatialdatatypes/WKBLinearRing.clas
+ s
+SHA-256-Digest: kW1mv8Bkw4K0vcKOgf08lFRymGMG2pnL/c5flz4geZg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerLexer.class
+SHA-256-Digest: Fan9Vdy+RcbgleG7ZRMW9QtXggvzh3fBZSS9SU3V9k8=
+
+Name: com/microsoft/sqlserver/jdbc/StreamPacket.class
+SHA-256-Digest: 1/LFSoXsJ69ouo1GjHZxgk01+oN1fag9U9dLQgZg7yU=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPooledConnection.class
+SHA-256-Digest: 4Jj8My7cZLbIWWv0BasyL7eqMYluHzCipCnsx/NTaNE=
+
+Name: com/microsoft/sqlserver/jdbc/EnclaveSession.class
+SHA-256-Digest: ZLNrX1nW1V4h3jQ5LraoZuy/WoTOKqYflvX5vx29E/g=
+
+Name: com/microsoft/sqlserver/jdbc/VSMAttestationParameters.class
+SHA-256-Digest: 39FHm5F3Gvd/vNKhiPrhR8xJNaEeOPdRHV3bC1JRQ4o=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDataSource.class
+SHA-256-Digest: 9xNyib0gOiFSr12ZUjd7cRcHaDCfpLUVMf1FbYhPezQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerCallableStatement.class
+SHA-256-Digest: LtR4+ptVUUtUma+EUtoTv97zemXGQAyVGcX8M6eiOnY=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$BigOrSmallByteLenS
+ trategy.class
+SHA-256-Digest: tFnadSeTgSKdl6Bq6PCxkdZcoWwYV4IWBesfeju56g8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerLob.class
+SHA-256-Digest: cg5IiFVYe7eMI71yDITdVhTXfE5T8+dLQQanGAVNJYk=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$5.class
+SHA-256-Digest: XEsx5CcFJ6it4EgsdqnqmPTeVGMr3rwu/Ua1RXvqj34=
+
+Name: com/microsoft/sqlserver/jdbc/Nanos.class
+SHA-256-Digest: cJn9LrqGTkTSRDg5cI0eBw0HC1z75+qKCZQggdf4guk=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $UpdateTask.class
+SHA-256-Digest: zQCHZBYGAAx3sTX2khlstx79e61sUx9HUwjT7jQJ7qo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$1ConnectionComm
+ and.class
+SHA-256-Digest: bXLCHIQDsdsFfSjdzOCXIWqzyq+CmIUjTPQ46jW92fk=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $KeySet.class
+SHA-256-Digest: 68G4so0MuwRALbEWMOpiJV9pBDKSg5zOK13MiBCdUyc=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$16.class
+SHA-256-Digest: H4jNZkIkzjdiOYUNtuadb+NRfjhyPqxRC1PQnCfyBIQ=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $AddTask.class
+SHA-256-Digest: vvBz/0yC8t/tmXNV/+UIiRBazDbNZ6Gcb+ckNX4V5b0=
+
+Name: com/microsoft/sqlserver/jdbc/spatialdatatypes/Point.class
+SHA-256-Digest: aFPaG2p8JTFSOA3QSs4Th4uX4J51rm630kR0X72cl+s=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$FedAuthTokenCom
+ mand.class
+SHA-256-Digest: dse7atbcAV1C5I3g8PqK1OMkzAKOEn1+jcbpCwKrk8A=
+
+Name: com/microsoft/sqlserver/jdbc/SSPIAuthentication.class
+SHA-256-Digest: yuVqsgxaXftbEvy3dXg1j+MBgRF6823CHQL7NS60xN8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLCollation.class
+SHA-256-Digest: wWCwYMHiruAx8eIu/2W3aetoTRCw4YHfnsErOsFUqJU=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerEncryptionAlgorithmFactory
+ List.class
+SHA-256-Digest: zjq3GU6WUPle3iqLeAHJ6M3Ft8igtx5iRPJQrx+XKhM=
+
+Name: microsoft/sql/DateTimeOffset$SerializationProxy.class
+SHA-256-Digest: sZJ89lcUUxAI7ZPS2EZ4sZ4nFKo4gFkmcO7TAOD2muc=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$ListWeigher.cl
+ ass
+SHA-256-Digest: h3P0GNC1zESLSD9VeEYshWRKmNzdZzQ0Lm94bxGmlis=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Linked.class
+SHA-256-Digest: FEUK1CjX/E/zy8Ppp0hS9xB1esuhVCwh1h/DNR+NsNs=
+
+Name: com/microsoft/sqlserver/jdbc/NTLMAuthentication.class
+SHA-256-Digest: /IvsDe2Mh7HhySB6TkbFMH67Y8bmI+lC3ln91j4avAQ=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/EntryWeigher.class
+SHA-256-Digest: RSahGqYKxrIZr50wCx2CX+v683+IVXoDh+GKugTP468=
+
+Name: com/microsoft/sqlserver/jdbc/RowType.class
+SHA-256-Digest: nZpuas262oWlp1sOEntagly22jL+znsApPk/ygLIt7I=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerAeadAes256CbcHmac256Encryp
+ tionKey.class
+SHA-256-Digest: JlWp6n+3z0GB2MSzkIaMp8Or/cSpB+wA3eVg4GeolvA=
+
+Name: com/microsoft/sqlserver/jdbc/DTVImpl.class
+SHA-256-Digest: ncxbS21dTUeHnhrJYqaUI/pnShwpL2KT5GX1aUpIHjc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDataTable$1.class
+SHA-256-Digest: TynJzFYe2kEy2d8IQSITzinlAcLT6b221Loeow6FqAQ=
+
+Name: com/microsoft/sqlserver/jdbc/AASAttestationParameters.class
+SHA-256-Digest: tPDFhnLBI3Y2BPs5USS9BKiqLIt0K5ApjMXYpMM5zwM=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatement$StmtBatchExecCmd
+ .class
+SHA-256-Digest: pc6TJhmcslnDgFS6fw5PLEsZgq/NTO8mwB9xxVIengk=
+
+Name: com/microsoft/sqlserver/jdbc/X509CertificateEntry.class
+SHA-256-Digest: ffOt4nu1h8JiroM1gEdQDBlc0lHTNnnmVstydom9+7c=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1UpdateRowRPC.cl
+ ass
+SHA-256-Digest: 6BG7Y82KH/WBWzyGFJvMCjx4Cig2tE/SnSWlKxH0M4I=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel.class
+SHA-256-Digest: gXOnZS+9ri74s8GXjqls+55DLmd61deBXQoHzb7BC2M=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCopy$BulkColumnMetaDat
+ a.class
+SHA-256-Digest: 1E1m8qeycpzymNu+efM8KRbtFrA6GPNEa4D9jM/qjLw=
+
+Name: com/microsoft/sqlserver/jdbc/Util$1.class
+SHA-256-Digest: kHBtInj5yk4dLR7hIK6pN30eMFl9UyVD2pvY6E0ZZTQ=
+
+Name: com/microsoft/sqlserver/jdbc/Encoding.class
+SHA-256-Digest: EvK4+AwuZM5Qi+Wuyq9hJRqzAoJ/PWPUsG304PA42hY=
+
+Name: com/microsoft/sqlserver/jdbc/dataclassification/Label.class
+SHA-256-Digest: 7CXzzLcUfaLgFTP9d1yvDCb2zVS09jDGGxJW/OQCio0=
+
+Name: com/microsoft/sqlserver/jdbc/CekTable.class
+SHA-256-Digest: I25ZkUpWGYLuKeryk2Vven8m6J/Qi64Z3oWIAeD4+MU=
+
+Name: com/microsoft/sqlserver/jdbc/dns/DNSUtilities.class
+SHA-256-Digest: a6OdohjLlhr5a3cVml1S+N3MvP+BIjJ+9HHkmJ65tr4=
+
+Name: com/microsoft/sqlserver/jdbc/DriverJDBCVersion.class
+SHA-256-Digest: LDAHHOZEeaZ34v+Te90UWSEdBo8Bss2dBrk1ycI10xI=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$7.class
+SHA-256-Digest: nvQ2nKgirQYiTB9cXbWbgDTCaBPsk4ORKh9LjeBZ3Aw=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$SSLHandshakeOutputStream
+ .class
+SHA-256-Digest: k3JV+7VcysFv2OQhUEGh/R4PNyXg+TXIzCEH/4ee1K4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource.class
+SHA-256-Digest: RbxVIezBZUaa1NN6LgJk1BdABkgxdCSfKBIDFmr/g4w=
+
+Name: com/microsoft/sqlserver/jdbc/AuthenticationScheme.class
+SHA-256-Digest: TxmpPXo7fPSUs44afKda05GCAj6Botz0CeGSfyRtE1A=
+
+Name: com/microsoft/sqlserver/jdbc/UserTypes.class
+SHA-256-Digest: QnWClAzD/CrTrVUkFdxHuMTQ5phfUGY/NndzYX6oCfc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_pt_BR.class
+SHA-256-Digest: hDoNWBGcsF6VtGKnu6siFkIpBl6p606QPqLKMphdeSM=
+
+Name: com/microsoft/sqlserver/jdbc/SSType.class
+SHA-256-Digest: 0O0gUbvXr90hBAYdMuJSvWiZQfYnJJ6sMhtY9lOPBi4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatementColumnEncryptionS
+ etting.class
+SHA-256-Digest: u8yA0VXEQvubxSObSPjJuel1W1XNgqVMOK47J0aGVDg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1CursorInitializ
+ er.class
+SHA-256-Digest: ECMn2ciLvp25CK8SLDomQoF/zX1e5HCXURMeOB+YQU4=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$DecimalNumericStra
+ tegy.class
+SHA-256-Digest: nIpvq5e+YTN0g9scx4idOaZLGt/Z4Euu7MurYuy+xy0=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$CityHash128Key.
+ class
+SHA-256-Digest: PEZQPrwqc7fVDZWCeFmYbOBsmMcIkrbG0sAExXW2kAU=
+
+Name: com/microsoft/sqlserver/jdbc/TDS.class
+SHA-256-Digest: aXZHeZOX9u+ShbGzXgtP7j9wA6yrsteBuB5ymQP8D+Q=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_es.class
+SHA-256-Digest: GVwS70dZnfojnWT0Dbcs19WbPDK0xPYY6FzIkcxKKT8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerMetaData.class
+SHA-256-Digest: EEaBgQrlqHd83s2KkNBn4CrBn6Jx7UgPtCii9FTum+U=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerErrorListener.class
+SHA-256-Digest: LRYFWjqtTop8bG0ujBbWnjNp7powi3tsrp87TkyRGKs=
+
+Name: com/microsoft/sqlserver/jdbc/EnclaveSessionCache.class
+SHA-256-Digest: lgxLtNfryEHPRu8m5bOzgNwiyUAjwbs5Uzrbhij25bY=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$SingletonWeigh
+ er.class
+SHA-256-Digest: j48Syhp6lxcd79BvmBgQ+ZhRtQOA1gE6sGwil6NcuuQ=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/LinkedDeque.class
+SHA-256-Digest: +4qs90nzJ9B275NtXweW/uebixJGn9ONHkM2Ql1+31Y=
+
+Name: com/microsoft/sqlserver/jdbc/FailoverMapSingleton.class
+SHA-256-Digest: dzOChtQbi3uzwhqNVlLXnqBY8RykEU76cFDNb2PiOP0=
+
+Name: com/microsoft/sqlserver/jdbc/ServerDTVImpl$1.class
+SHA-256-Digest: ZPoFzJkbIeE3C40e5vF9OueLHS3hE2SwcD8w1iNvL80=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerResultSet.class
+SHA-256-Digest: KZPWMWAAPboHQCNhQ8j1edYbMtzXdXsWxX9NK+8Y0fo=
+
+Name: com/microsoft/sqlserver/jdbc/MaxResultBufferCounter.class
+SHA-256-Digest: nqx/dxhSCBDddY6GVcKdoNgP2RjBM/y60QlTOTRA2FA=
+
+Name: com/microsoft/sqlserver/jdbc/Column$1.class
+SHA-256-Digest: YgcQAP2HUZG4UitDyxmEuFAvh2fEj6/BtlCSXhoSztg=
+
+Name: com/microsoft/sqlserver/jdbc/StreamTabName.class
+SHA-256-Digest: 0e/OMwfefprSKPYNgDRxekWVA8s3OACVLCUK6E8zaCY=
+
+Name: com/microsoft/sqlserver/jdbc/SSLProtocol.class
+SHA-256-Digest: kjXyQtahMQia39qYhq6rEhGI+Xza7LXCcG7ms5FSoOY=
+
+Name: com/microsoft/sqlserver/jdbc/StreamLoginAck.class
+SHA-256-Digest: J4afF6baSJa25wHEJ+8A84oBxIP9DO+jcBzB9LegvrI=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $DrainStatus$2.class
+SHA-256-Digest: j3sds8jdQYUfmNcEHSc18CFDpRFc4LgqVU8aRM97i1E=
+
+Name: com/microsoft/sqlserver/jdbc/KeyStoreProviderCommon.class
+SHA-256-Digest: tEfKlvNlJbkwrh+G5NZwh5eizVrITQL4jSuxNxQun6E=
+
+Name: com/microsoft/sqlserver/jdbc/XidImpl.class
+SHA-256-Digest: YE9K2swvAdLQjz9PeAY/RG16P+CIHUWKdh5vMTmEGqM=
+
+Name: com/microsoft/sqlserver/jdbc/DescribeParameterEncryptionResultSe
+ t2.class
+SHA-256-Digest: Ki/+phRk3w8aeaCet93X7O0SYq45GV2k2Ns3wPdGQhI=
+
+Name: com/microsoft/sqlserver/jdbc/dataclassification/ColumnSensitivit
+ y.class
+SHA-256-Digest: bY20qqTRgjWwCyx19KQEIun9PPzt5CmRgSPwqxBGWj4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerClobAsciiOutputStream.clas
+ s
+SHA-256-Digest: gbzbbg3U01BApSsacQaS54miBceaeYUI8kdbYhFpmYo=
+
+Name: com/microsoft/sqlserver/jdbc/JavaType.class
+SHA-256-Digest: FSn8wmgyIMyzptd8ZKi95hsOxqfLJO8fCtmqd/yR1e0=
+
+Name: com/microsoft/sqlserver/jdbc/KeyVaultTokenCredential.class
+SHA-256-Digest: uUtIDo+Ps4dnHxJIQjL82b6PdHCXV7CHPUspNXZly2U=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement$1Prepare
+ dHandleClose.class
+SHA-256-Digest: gVxYzD7tStfOCn2zAu9uJfGxrrnYKuCJ2JowFqcNqWM=
+
+Name: com/microsoft/sqlserver/jdbc/JWTCertificateEntry.class
+SHA-256-Digest: 4DR69kHdYAb8qNq+lTuQ7kOXWtiCrQxVwI3/O0ACd7I=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBouncyCastleLoader.class
+SHA-256-Digest: e+lqoVLK+HqZ55D+MtVP+iTkSiOAlOt6ybI9xKv/RfI=
+
+Name: com/microsoft/sqlserver/jdbc/SocketFinder$Result.class
+SHA-256-Digest: 8JdJ2yshbUW8Sf7IeW78Vl97o4J55Wkb2x49kYgbBK8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerEntityResolver.class
+SHA-256-Digest: SECBKbFXJciD9LxNb/MLXrpMPSaCOUZf+gqx9zPO0vk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerCallableStatement$1OutPara
+ mHandler.class
+SHA-256-Digest: FK7QSowpk87UJy7cqjkG90j0oZkoyYJY2PmmeLdhziY=
+
+Name: com/microsoft/sqlserver/jdbc/TDSReader$1.class
+SHA-256-Digest: Azs1PvO1DQXJbcVf5ZGN6ac9dZcSHQyUqhkqO92BVrg=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/EvictionListener.class
+SHA-256-Digest: DbdfaX17DwZXgSMts7b2Q1ir9JCezAAbGimbY8c5X30=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCopy$1.class
+SHA-256-Digest: nBoNefCw6FLnUPn9cKV9kQPhWyosrW1USoNsGMidSJ4=
+
+Name: com/microsoft/sqlserver/jdbc/EncryptionKeyInfo.class
+SHA-256-Digest: e1Y0I3I9XLD8cxpkB3iWq39IboWrIBM7opptq0WZpX0=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_ko.class
+SHA-256-Digest: S9whutrdzDZaGDaxkMkUN5AZplbyBzOsq33FQ1fnoDs=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$11.class
+SHA-256-Digest: pfNj7Wa1t00PdNfz5gOcA3nE/KW1L7vZurrGgWB8AEk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerClobBase.class
+SHA-256-Digest: p029mTorTqGSu9fAom7Rh9TwOnS4Yt6VUnGDRMbye4s=
+
+Name: com/microsoft/sqlserver/jdbc/MaxResultBufferParser.class
+SHA-256-Digest: ujrIXiVAz5l3DFNJ7238Ov0dhS6xIvoENnQ4O5HycnE=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerError$TransientError.class
+SHA-256-Digest: OZNasb6YhplRAUxcqgyOQrR1kzx5hcSnhU4/fH9E5tc=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCType$Category.class
+SHA-256-Digest: zSziWeuVpni5IUgrbQ4z3oKNvgpKXb0xLbHpPWce5Is=
+
+Name: microsoft/sql/DateTimeOffset.class
+SHA-256-Digest: eFBO3OEcWFiH1ktFZkq+7CMo8FE4XHMaoOGY01vRWHw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerParameterMetaData$1.class
+SHA-256-Digest: MuXIQ5awWxcYJZnKwdaQMQ6XBXZzL5JSD416expybUo=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$HostNameOverrideX509Trus
+ tManager.class
+SHA-256-Digest: dOEatoPRLs0Li4qeniEUzT7JYm6SXM+OuvxhrK/LXpc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDriverIntProperty.class
+SHA-256-Digest: OwPtE6etyuZQM37/l8Ve63dlbCSpjmmBljjpfAUPQ1k=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerEncryptionAlgorithm.class
+SHA-256-Digest: IquWjlbxjp47bKP5xDh8m4G2B2ezSPUEjlEY34ofY90=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCSyntaxTranslator$State.class
+SHA-256-Digest: OHJy6SDmUJHoGSfOjTPsXLoeeE7e/nEA10vOPGbqz7E=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$FederatedAuthen
+ ticationFeatureExtensionData.class
+SHA-256-Digest: UN2jmiu6b4tbZv1MKvnmlzjST7+GL6TxvY8a32XndaE=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnectionPoolDataSource.c
+ lass
+SHA-256-Digest: +sC4l0FJJcJ6M5Z+yDUDq87R88qZALk/VSA60tstrk8=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$3.class
+SHA-256-Digest: H7oqCbMRbL4hubX+LWA6XWv7Ezmapf4VXjZjSrLPEFU=
+
+Name: com/microsoft/sqlserver/jdbc/TDSParser.class
+SHA-256-Digest: 91T3cNLJ8KhzFg9lCvO4QNb3fW9ZZLEfb7GHYQPNd8k=
+
+Name: com/microsoft/sqlserver/jdbc/SQLState.class
+SHA-256-Digest: SGnlT4BDaR/Epz3OP2RBoxt1J/3QGegkQwDfcXiidzQ=
+
+Name: com/microsoft/sqlserver/jdbc/ActivityCorrelator.class
+SHA-256-Digest: uZLBivm0i/VAx98Ynxdjvi33o1IeI5AQT3+16bA0Xf4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1CloseServerCurs
+ orCommand.class
+SHA-256-Digest: Di3rhjczN9EZOT2XXarGXJVFSL2LnUZFzE09iCemXPM=
+
+Name: com/microsoft/sqlserver/jdbc/GregorianChange.class
+SHA-256-Digest: Nynp8tGs/g2QJjGKRoPdmrTq1ixMS4RrhMyx4WK2G7I=
+
+Name: com/microsoft/sqlserver/jdbc/SSPIAuthentication$1.class
+SHA-256-Digest: pU4fbVYe6Ps8BdsKgSNT21adzQBcv81GJlePsRiyUU0=
+
+Name: com/microsoft/sqlserver/jdbc/DTVExecuteOp.class
+SHA-256-Digest: 5/C+A1VC2vTuW2lV2tuHo8h2PsRHDPQygnnt04L7gZY=
+
+Name: com/microsoft/sqlserver/jdbc/JavaType$SetterConversionAE.class
+SHA-256-Digest: SINh/QOc1+K2xqPfKq3zmDi871o8LoIcbQUV4vQxjBA=
+
+Name: com/microsoft/sqlserver/jdbc/TDSReaderMark.class
+SHA-256-Digest: ag78NiieGalrQk7AjwcxTVOUkqVg5SbK47HIp+xzf7c=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $RemovalTask.class
+SHA-256-Digest: eQ/AQMJqjgaLFT7WZ17cB/uZa49JNI0hSBqUCnbzNaU=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSetMetaData$1.class
+SHA-256-Digest: FBUwBTQaSpI+ALUlCRP7MNVFAb/hOA4rn9v6MW+FbyI=
+
+Name: com/microsoft/sqlserver/jdbc/BaseInputStream.class
+SHA-256-Digest: 2bvTK4kqFTtNq2Ffw/NGiKljjNfMOBZd6GaJ28Hn440=
+
+Name: com/microsoft/sqlserver/jdbc/dataclassification/SensitivityClass
+ ification.class
+SHA-256-Digest: axj4kakqT/Ai/9ooRsLekXuWyidvnSYuoQMoUofDgpg=
+
+Name: com/microsoft/sqlserver/jdbc/DataTypes$1.class
+SHA-256-Digest: oQRvYPI3ISIt0rYCE7RKxFkhhCImPWnV5tI9p5kDTXk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement$1PrepStm
+ tExecOutParamHandler.class
+SHA-256-Digest: yMstUg/10XnXu9WMcMPlrMF31DU9lLwZIJw51DxBD1Q=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet.class
+SHA-256-Digest: ECe5yLrfgyrrrct3PgOBHdLp/GJgFyn1YZOir9dbTpo=
+
+Name: com/microsoft/sqlserver/jdbc/ApplicationIntent.class
+SHA-256-Digest: LiMRxMuBSVCAQiRDyYEVbKt4ahgP8ZRa/vCreZ1VXyI=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSpatialDatatype.class
+SHA-256-Digest: k2vqy10IfAmNojsYBU0ip7htKdk8uF/2VLxPfGkxrOc=
+
+Name: com/microsoft/sqlserver/jdbc/spatialdatatypes/Figure.class
+SHA-256-Digest: bEOeVD0GgOUPflgWRh+D9l3TGR62d/A8F2va18FJ9BQ=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerDataRecord.class
+SHA-256-Digest: JI0PZ7+Mu7udVs/btbyEbOFCosYtu7Q07Rd2ushHH9U=
+
+Name: com/microsoft/sqlserver/jdbc/CacheClear.class
+SHA-256-Digest: MZfHNIl6o9+dQqiNVs21r9/s4wu3f8ocXwWZfZzJG28=
+
+Name: META-INF/maven/com.microsoft.sqlserver/mssql-jdbc/pom.properties
+SHA-256-Digest: v0adjf9HfAYPS8uzqDFUPHBDk9RS2jadbXoWJyKy96E=
+
+Name: com/microsoft/sqlserver/jdbc/StreamRetStatus.class
+SHA-256-Digest: 4DhF9891c6DUb9S41Gm+iQo1vWZ0fV3k2NP6Ie+HDq0=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerNClob.class
+SHA-256-Digest: uQk8xT4Ibyqmhwvjy4cmzqaLUXHP8k83r4RBC9o00bc=
+
+Name: com/microsoft/sqlserver/jdbc/TDSPacket.class
+SHA-256-Digest: pmL/hnqSMsqy1R1Qje4W39iNNuCmfxWv7NoHp/oKyUQ=
+
+Name: com/microsoft/sqlserver/jdbc/DLLException.class
+SHA-256-Digest: U2WGK5fkTSj4D/nn+zPf2VqEqLwzraZLlnaUfspo/DU=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnectionPoolProxy.class
+SHA-256-Digest: 9juINwRVfH9kYa8GPk0KvfHQDaP98Xh8rWLqL3gfvpk=
+
+Name: com/microsoft/sqlserver/jdbc/Util.class
+SHA-256-Digest: eMFSvuw3ogk2BUJItm5ffDycvEuT+mkXzBuv/rZSlkc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDatabaseMetaData.class
+SHA-256-Digest: IG12x9AOUvGdTW2D0zcCvB2+ZZNxAxqUhg3cmDfsuDY=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection43.class
+SHA-256-Digest: uaYqoRL4nfN9uOPAape4PYJasTqLDsACyKEzY4zlF74=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerAeadAes256CbcHmac256Algori
+ thm.class
+SHA-256-Digest: rko4BIJhiUeqGqxL43+DKGoellEhM/SmcUWyp7LkK7Y=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCType$SetterConversion.class
+SHA-256-Digest: qMTHBMphNhaPra8sJw2yVQRIOuKC46vrxU1YQrj43bc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDatabaseMetaData$CallableH
+ andles.class
+SHA-256-Digest: U3bpjKEYtlL/PdQU7R/e6h0vyp87200GMq7ZiDn782Q=
+
+Name: com/microsoft/sqlserver/jdbc/StreamSetterArgs.class
+SHA-256-Digest: DwHc6ZHQD96cCCQ0U5HK6dfL6cPdxpkundE5Xz+D3gU=
+
+Name: com/microsoft/sqlserver/jdbc/spatialdatatypes/Segment.class
+SHA-256-Digest: MmhKYi8EYGbchRYs5fANN+/U+CQ04IC3/OOdTev5gzk=
+
+Name: com/microsoft/sqlserver/jdbc/DTV$1.class
+SHA-256-Digest: Aqnbqk9cBa7l/YGYral00kQR191L7jaDKLsWr+mCvRQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_zh_CN.class
+SHA-256-Digest: n3OH9qYso5LQBPEVBJ9cPlnkCN4WOYokGQm3HfQYjk8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCSVFileRecord.class
+SHA-256-Digest: p22EBkBruN+fuVS+JhGaRRq5ehaBxEn6dvk6GorVKBI=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $KeyIterator.class
+SHA-256-Digest: 3V4WuK8a7aX766ekY5dCFAsZxgPQ+VMKS2leYlGFak8=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers.class
+SHA-256-Digest: OELTP9qMMjLcpnPZpe5gRClRlyxqHzFGaAlZirJSzYc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerClobWriter.class
+SHA-256-Digest: IIzDu1VagM7CzjDBbIZWpnt4fOtz2aUHlX4sup+dG9o=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSymmetricKeyCache$1.class
+SHA-256-Digest: lYpmZZ2mQ6TNiD07jUAO3yvEYZFttVexN8w1AVPSi8s=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$PreparedStateme
+ ntCacheEvictionListener.class
+SHA-256-Digest: q+JbEBphvxtAli8y9jcjmWSbmfTpqVKG26XGhzZcRaw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerClob.class
+SHA-256-Digest: kLXjsGP5L1m7hgLZ5mVdvG3elQ8gxfwr77V78M8knHo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$1.class
+SHA-256-Digest: f5FXqQ5ipbvJQeTnzzciSa709OMC33/4FSe2ysEVcIQ=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCSyntaxTranslator$1.class
+SHA-256-Digest: mQLQfANse2BPb/Y8CFu0AXOKulHt+Pz9anJZV5JdshA=
+
+Name: com/microsoft/sqlserver/jdbc/AppDTVImpl$SetValueOp.class
+SHA-256-Digest: Xgf6ugpBAooQY1tMfn5vTQKXMWomTlMwU/YEkk2VLWo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDriverObjectProperty.class
+SHA-256-Digest: WSWxnqqVigt98iZcSbMOCtFggmtwH/ucyb+W7c5K90o=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnectionPoolProxy$1.clas
+ s
+SHA-256-Digest: vSXV/bSwskhMTo9kS4Mz8Q1zMvK7I7c3ojhMZQY8CMg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1InsertRowRPC.cl
+ ass
+SHA-256-Digest: /9o8DsJRchFHtZ5QVa4oXj5o1IjF3sc7v98cclpNcRI=
+
+Name: META-INF/services/java.sql.Driver
+SHA-256-Digest: bzPHanLs9ufR+6Oggk08p/PYwdHDVSRKBulpKNO3fGc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnectionSecurityManager.
+ class
+SHA-256-Digest: Ca9ZQbL6rfxf/qVwkieX1ePHg30DOjEHssl5WwGIW6o=
+
+Name: mssql/security/provider/MD4.class
+SHA-256-Digest: MCV0Z4BzT5c9QL6dtNTI34vEMqi/ZfzUeBPPsJYIm3w=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerConnection43.class
+SHA-256-Digest: Du6LksBokqweHjmjaxHjn/ghynLU82sUj37jD6O7xq4=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder.class
+SHA-256-Digest: cjOkKwIlhlJwpDwi0s/OFdO0FHaZSEGcEC2YmOnFi50=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement.class
+SHA-256-Digest: 5z9NkwtxQM1b/BfFG/ysQgkwkfoDE2ahSWUP/v7UV0Y=
+
+Name: com/microsoft/sqlserver/jdbc/PLPXMLInputStream.class
+SHA-256-Digest: g1fdrTTetxyYeYRNqmhT68w0F5Hup28PDhWWsuJE/ew=
+
+Name: com/microsoft/sqlserver/jdbc/TDSWriter$TdsOrderUnique.class
+SHA-256-Digest: Hq4t0L+XBod9OL0SRayT2wqHH66A2Jn/+2mx1ujxJo0=
+
+Name: com/microsoft/sqlserver/jdbc/JavaType$2.class
+SHA-256-Digest: 0fxECttlCl63hQS+TvO8EkOlOtHhLephNLHJEGBtWMM=
+
+Name: com/microsoft/sqlserver/jdbc/BaseAttestationRequest.class
+SHA-256-Digest: gOJ5pE+dBcxKcwAQmFA3IJTxlw3zI0ot5muph4KRiBI=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSecurityUtility.class
+SHA-256-Digest: UlG3R8XKkPkjSRoaAsgdwPayvM7GUeyrbo+OevdeYfc=
+
+Name: com/microsoft/sqlserver/jdbc/ReaderInputStream.class
+SHA-256-Digest: tYnA3OooqU7x/4SHBk2AfI8hp3X5LaSzz1gJIEzjuKM=
+
+Name: com/microsoft/sqlserver/jdbc/UTC.class
+SHA-256-Digest: ukvM71VUeBPWj7/DgbD8WUAXs4vDDezM5WWEKSQdFjU=
+
+Name: com/microsoft/sqlserver/jdbc/ZeroFixupFilter.class
+SHA-256-Digest: i+8a5mLOHH+5M56UgEcg9OQ6vlkaFyh3NnmMTxDjsXc=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCSyntaxTranslator.class
+SHA-256-Digest: 7CYrJcgMcPrWsKMVoT1o+rAEtELmNEgrLgZnXTnWcWM=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$2.class
+SHA-256-Digest: MiKQrORHkKLuFZSwhDYveL9dIK5LQv78Z6GkMSU1I8E=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerCallableStatement$1ExecDon
+ eHandler.class
+SHA-256-Digest: xemiCX2Lw9Jf0H4BMoUnv9ftuo1zTNbvw98IuIL1coM=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatement.class
+SHA-256-Digest: +Pslr580JHaX5uN7btPjD7M8mdN2SCFseEddefGO6TE=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSortOrder.class
+SHA-256-Digest: srhwgm1PyLfEEUnwKRR/xiQb0xQWUUdttsahOgiBVUA=
+
+Name: com/microsoft/sqlserver/jdbc/ThreePartName.class
+SHA-256-Digest: +6fhe/spgpAQYbBOHq1xno0gxunJ1Dv32Gh4X4txYI8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerColumnEncryptionCertificat
+ eStoreProvider.class
+SHA-256-Digest: hgJgELmrGfrXyR49+s6/jxE+0R1DnCHhkaPw6A+FZuw=
+
+Name: com/microsoft/sqlserver/jdbc/TVP.class
+SHA-256-Digest: E7+pATFlng0vTtMUNQRcSpM6JBKAkWea2jXFfLS2Qxw=
+
+Name: com/microsoft/sqlserver/jdbc/DDC$1.class
+SHA-256-Digest: 7Sq4smsHe1FAaGDadIA/Zldn5+XMrR943jo2wCE6gR8=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerBulkData.class
+SHA-256-Digest: aEYmJ2dJmdAD7ow/BgF4LBoNYoIwTyNloaWvMsq/maE=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerFMTQuery.class
+SHA-256-Digest: qtomWpexqbCJHChcsMuFUb2NgxV+AbSiZlKy4SibF0k=
+
+Name: META-INF/maven/com.microsoft.sqlserver/mssql-jdbc/pom.xml
+SHA-256-Digest: i4PywtTVHiJnb1WAr6tNh4BqiZ4Qaq/Qdo2GcDneg7w=
+
+Name: com/microsoft/sqlserver/jdbc/PLPInputStream.class
+SHA-256-Digest: GuvCB8rzPMxQcC9a2dXbkXxM0TdFiHM5dql4B2TQN9k=
+
+Name: com/microsoft/sqlserver/jdbc/ScrollWindow.class
+SHA-256-Digest: UuFmLi20YUutydQY4QLFQtmEzIVPH2Ausi7UzKmDU+o=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$PreparedStateme
+ ntHandle.class
+SHA-256-Digest: uY+7sZmeJbDFWZNCHkQZmD5Qbo+tUpRMCofbzzDXqPA=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $WeightedValue.class
+SHA-256-Digest: LFuTqvMbG8XnT+6oAIpnLUCFiwSMWRatD2vP9n80wo0=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerPreparedStatement.class
+SHA-256-Digest: WLpnikP78ZWvTr1Ui1VwUnP22xS+BWtTmiCaebU4j/A=
+
+Name: com/microsoft/sqlserver/jdbc/osgi/SQLServerDataSourceFactory.cla
+ ss
+SHA-256-Digest: QG3B7T+NKI5T7s7YmL6Dl0pp5Zj00DjNtA/ONmS4Wlk=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$1.class
+SHA-256-Digest: kPYhR+MyPlnvIqjLx1Q2ES+HlelPKACKJWYMV3Xj0VE=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCopy.class
+SHA-256-Digest: YV0+PGfKLwfQzkE/yKSA/rWB5HNB5Nfuk6j8+r5v1ss=
+
+Name: com/microsoft/sqlserver/jdbc/IntColumnFilter.class
+SHA-256-Digest: ogzyIshhDrmyQC4dI4njK0anB8m4uTvMvRuQCAqgKcQ=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCType$UpdaterConversion.class
+SHA-256-Digest: Jz4R3ZuGw/6TkFydS9rmO48wyIEFWbpHzp6vZzT53LA=
+
+Name: microsoft/sql/Types.class
+SHA-256-Digest: cIsukzc7RhXfsvdbx3UkWdqgpDq04e+klUDLdgiBUq4=
+
+Name: com/microsoft/sqlserver/jdbc/ByteArrayOutputStreamToInputStream.
+ class
+SHA-256-Digest: ZR7vlIDhzCSH7021Nmpk9fb9YSifpGTwZVs6y/EY+oM=
+
+Name: com/microsoft/sqlserver/jdbc/StreamType.class
+SHA-256-Digest: h5aq0ty0obeuuA/M2ro5uyScgq9W7tujLuc/CKR5ugA=
+
+Name: com/microsoft/sqlserver/jdbc/dataclassification/InformationType.
+ class
+SHA-256-Digest: wIs1l5WwHhNX2PuUT/j3C/UU/OgYq/Mkx0AKmbRNouo=
+
+Name: com/microsoft/sqlserver/jdbc/dataclassification/SensitivityPrope
+ rty.class
+SHA-256-Digest: 849bxl8wKu6J/6Tcb1c8zVUSPrr8S7zrNjn0rjz0tgs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerError.class
+SHA-256-Digest: vnIh0WeiVLx/78Adh5gf0LJplqx9dj1s1c7HRvY1oJM=
+
+Name: com/microsoft/sqlserver/jdbc/StreamColumns.class
+SHA-256-Digest: lPIsRls9yVfnFSOYjOf8CDdDAdF6It3MEIg1tuOr8vo=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $EntryIterator.class
+SHA-256-Digest: ZgM0LHGoYw/5lJbK9PHEfJHEaAhT393+HYmHYaOGRWg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatement$StmtExecCmd.clas
+ s
+SHA-256-Digest: CDlXsDYEi4zF7NFQGTKl3AFScMvuWYSRxG4E9OBk9Jg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerAeadAes256CbcHmac256Factor
+ y.class
+SHA-256-Digest: 0Zj4ykqUT3Z3b0ZCBTMwJ+TCpqvCYVevtllIh9cJPb8=
+
+Name: com/microsoft/sqlserver/jdbc/InputStreamGetterArgs.class
+SHA-256-Digest: gY+4o3jJwtNXtcj4BWVinTS3E9tcJ28xnrcDf6Q+1SE=
+
+Name: com/microsoft/sqlserver/jdbc/SSLenType.class
+SHA-256-Digest: ym913f5MOT/onnXwX51ygBL4rgZ/NsWUT5IXHvxzUdk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$State.class
+SHA-256-Digest: jR3/M4vLyDN+PMbdmKnjak9OcP5zM6v7qnjhWT6huiQ=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$SSLHandhsakeState.class
+SHA-256-Digest: l8EQ3LBs052aGUXBqrc4h43wY7TITcwON8Xr30kcqcw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection.class
+SHA-256-Digest: NGU/PMeIWeT6wI2316M4wlitoXkcDCS4FqDZX/Sc0TM=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$10.class
+SHA-256-Digest: j9hGy5Kkv9eZfHxZk9Z2SAc4yjmHUgWnWLayctULGoU=
+
+Name: com/microsoft/sqlserver/jdbc/StreamColInfo.class
+SHA-256-Digest: Xf5Zpo3L7qm37m9+UCCvpvAITzr9l4qC2IJ9dXjezyc=
+
+Name: com/microsoft/sqlserver/jdbc/DDC.class
+SHA-256-Digest: Aasl1ePXUX5SEK6X3237kO8NVhB4hv7e2il5fGnxEiw=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCType.class
+SHA-256-Digest: CGmhDNngmgfp6aT3wbT6jFAvTBDiARVzINUwagzsfy0=
+
+Name: com/microsoft/sqlserver/jdbc/KerbCallback.class
+SHA-256-Digest: QCbLE0aGmITQC3POnpnrmx2x8LHg+t+YVhypf80Wplc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement$PrepStmt
+ ExecCmd.class
+SHA-256-Digest: kRlrwoQJ03+CuAcIZMWQpWO6bUwaTK9cQtkxbWF68q0=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$1.class
+SHA-256-Digest: cmskSkGHsxtDmPdIraO+omBBGG4d2d6oztoDNva6nZM=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkRecord.class
+SHA-256-Digest: suJ18UuWeyqBiwkZHKmB6iocit1BNQ5mCKscrKuIe8k=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerException.class
+SHA-256-Digest: 1ASPfY8iDYqpYiOGzlcLuRZzBloOpg+kVgOJGDZUtNw=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerSavepoint.class
+SHA-256-Digest: Jb4DIZawGUtSstp/GiH91jVNUSP0b7I8lwtBRf3gACo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerParameterMetaData.class
+SHA-256-Digest: m1Iq639RtiGrLPxyq+NIpoLrZSFgv3gzqP3ReMwXCE4=
+
+Name: com/microsoft/sqlserver/jdbc/DescribeParameterEncryptionResultSe
+ t1.class
+SHA-256-Digest: f0tdrpFKpAbd5x3TZ4axf7wXrFooZI/pLrzHZasqr0s=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$IterableWeighe
+ r.class
+SHA-256-Digest: z4ZfgTr+qyYluLEZHBy4s/gjt74EHv3m8tt4L2NeaE8=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/LinkedDeque$AbstractLin
+ kedIterator.class
+SHA-256-Digest: 8Usbdm5+r2RU9grcq2HKEfru/DUplHL5LPfWLSwbfPo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_it.class
+SHA-256-Digest: DHkrC2xWrfyhT/+IizAQgzlCTH/UEOWE9gwxiqLgHbU=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCopy$ColumnMapping.cla
+ ss
+SHA-256-Digest: Ou+KsILu3Ws0Rhthvcm9mtoJZRCBHojkFyUQfKcW5No=
+
+Name: com/microsoft/sqlserver/jdbc/DriverError.class
+SHA-256-Digest: 2s6BAnYHp2KHWRJPWjV5qqXgWJzjq6UXcArSAkWvrFo=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerEnclaveProvider.class
+SHA-256-Digest: KhF69BqucyoTKQWc1nfvDLgNeVnRj0se5zxySme9O0Q=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$MapWeigher.cla
+ ss
+SHA-256-Digest: +6nwIjWQ2on7rVdomwoEUeOe7Bdi0kW/MoA+jPdfqUU=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$15.class
+SHA-256-Digest: j+6bXPCsgZT+v63rMIvsKL2dykREbZkaot9dWOVWlII=
+
+Name: com/microsoft/sqlserver/jdbc/StreamInfo.class
+SHA-256-Digest: asScxPkOSb2Vk/4wkNYzWN02BYRkJR36yxrJjdrwUcg=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerStatement.class
+SHA-256-Digest: tYHN2oltQ+DZXrSALs3EWgSu9hVwTilY1SVPyq6J5Ic=
+
+Name: com/microsoft/sqlserver/jdbc/SharedTimer.class
+SHA-256-Digest: KF8tf8W2mPPUd6A8htvmTdVrWqKiW+2uxPb6oLoojLs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_fr.class
+SHA-256-Digest: yo/6e+RDQlec3kMzEoLXn+COTvMP8Yasg8hAlDoPCzs=
+
+Name: com/microsoft/sqlserver/jdbc/PersistentTokenCacheAccessAspect.cl
+ ass
+SHA-256-Digest: E4jsZl0QWKbyYvvpIBsDhPFqtYtQFge/U+6wfu1WhOk=
+
+Name: com/microsoft/sqlserver/jdbc/ColumnEncryptionSetting.class
+SHA-256-Digest: ElYPmGQZwfOuJtnvduv93QEBmj297bP8gOb7o0JUBko=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$ProxyOutputStream.class
+SHA-256-Digest: z0g+7v62yey/w3pEDV++xTYNQZPc08P/+nMP1Mi5Wxs=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerConnection.class
+SHA-256-Digest: VeG9lZRa7Lp4/WzjFMXeMTNJZJo8syhwNxCG3UM6DZg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDriverBooleanProperty.clas
+ s
+SHA-256-Digest: 2AxqmDcPYdeyI+orCpxbelxUAej8IgueFyuqvExKnxA=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$FixedLenStrategy.c
+ lass
+SHA-256-Digest: bo5DXZA8e3zBikSAQ8eBniBloKFozjgcXKVZW6v70ok=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$1DTCCommand.cla
+ ss
+SHA-256-Digest: HXmDOEHp5ijsl7g9nJaARXhRpx3zPHD05fH/c0aD7uo=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $WriteThroughEntry.class
+SHA-256-Digest: fksNgjpn1n1vKQbJuJh2yyoZXf3mgK0tLHR2i2Y+oj4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDriver.class
+SHA-256-Digest: bFawVMnNrVWJuYlQf1fC2xwwXtSyz55sYKvrGSoNH8w=
+
+Name: com/microsoft/sqlserver/jdbc/ICounter.class
+SHA-256-Digest: WC8OVo5qw6DVjJxCBiEq3wKnF5zipg9M2/y6H+eD9zs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1ClientCursorIni
+ tializer.class
+SHA-256-Digest: uxHdK5hCEG842v8D4MJYeJm8r7insobygHUbnZVBReQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerKeyVaultAuthenticationCall
+ back.class
+SHA-256-Digest: XOvqZ0lEIyYGWjvNI0R/0kaoSkj9BDHxmii0trBx0Fs=
+
+Name: com/microsoft/sqlserver/jdbc/FailoverInfo.class
+SHA-256-Digest: w6cyCUkmQWibzOsgs1bNAUlzk16Ujk1rPJzuc8GXI+Q=
+
+Name: com/microsoft/sqlserver/jdbc/SocketFinder.class
+SHA-256-Digest: kMw0miMuqu7hQxVc8qNZJdGIb/zH6SpS+NRKe4oBPbs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatement$ExecutePropertie
+ s.class
+SHA-256-Digest: ACRQLWepPM3gW1VGpK1yC52XWdg9BEHnUDKVt5D7TsI=
+
+Name: com/microsoft/sqlserver/jdbc/InternalSpatialDatatype.class
+SHA-256-Digest: vWfl2f+3hx9FVnMVeku7lx3knfIRWKrbiPkbjQ2aIZk=
+
+Name: com/microsoft/sqlserver/jdbc/ServerPortPlaceHolder.class
+SHA-256-Digest: JhRd9d3IbbOKekOfSjyjsxHe9cSImqvmGt0j6fU3dWo=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$KatmaiScaledTempor
+ alStrategy.class
+SHA-256-Digest: YZXXUJBK3D9rEp8P1KJadKlV4vCM4yMEbgY8KRC0BKM=
+
+Name: com/microsoft/sqlserver/jdbc/ServerDTVImpl.class
+SHA-256-Digest: KjoiufWLCocyqd3yNRJM6od7Lyy8PmCpMpgm79VelrY=
+
+Name: com/microsoft/sqlserver/jdbc/AsciiFilteredInputStream.class
+SHA-256-Digest: 961ZLtzjIAFu35BSL1Uc2jey8dOTC++G1iQhEyMCT60=
+
+Name: com/microsoft/sqlserver/jdbc/DataTypes.class
+SHA-256-Digest: 97sMZSwsqgk/qokvfmU6a9iKBxoQQJdxqKbI40lOB+k=
+
+Name: com/microsoft/sqlserver/jdbc/TDSReader.class
+SHA-256-Digest: cq6VNoLQo3NEstnU7IGgH/Q04fWeg1/5GON4OUDW7Ls=
+
+Name: com/microsoft/sqlserver/jdbc/SQLIdentifier.class
+SHA-256-Digest: YCBxQ53iPCN6mFQzQgRiyh+oTPOWI8W/pZM6r2HMONo=
+
+Name: com/microsoft/sqlserver/jdbc/SqlFedAuthToken.class
+SHA-256-Digest: 67dT+oQ0+2sXZGa6uftMUiMe1A7Dm462/EG3d+yMhEs=
+
+Name: com/microsoft/sqlserver/jdbc/TDSWriter$1.class
+SHA-256-Digest: xmjf/xjxpzV0LW5fyBDpQ3wfNMMiGIAA67yXkQnSt6U=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$ByteArrayWeigh
+ er.class
+SHA-256-Digest: f6eKLA0OtbWpUbkcmQwHbHiXuRFveFWCpsGGMUq5M0s=
+
+Name: com/microsoft/sqlserver/jdbc/TDSWriter.class
+SHA-256-Digest: RZTai4Rhr14A/KnOpK65WHmtP78xfbmwNA2jT4bdtkk=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$4.class
+SHA-256-Digest: pxVska3YwdKzor3Lf5CFSUZ7jryW1qyggtApj7FSZhA=
+
+Name: com/microsoft/sqlserver/jdbc/osgi/Activator.class
+SHA-256-Digest: dvx8/KDDsgMrLh120OlWoOeWZgxugsDqiEw+Y+Dn39U=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSQLXML.class
+SHA-256-Digest: 0ZPKf7tiePforxVwezKSGRELz+mh81HvI4UtkS4vQy4=
+
+Name: com/microsoft/sqlserver/jdbc/IntColumnFilter$1.class
+SHA-256-Digest: EnXeD3t+Lzu+DqjidQ0H1R7mnW8bIplurg8fhStqwp4=
+
+Name: com/microsoft/sqlserver/jdbc/CekTableEntry.class
+SHA-256-Digest: +HwwKtGM2shJWeKP2Alx8zJhkJq41itqx8olO9+3Ysk=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCType$1.class
+SHA-256-Digest: moCSbDty15vekrzu18ga/Ckdh9nZNspXPx8AHF1NYs8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$SqlFedAuthInfo.
+ class
+SHA-256-Digest: qVgT2tP1wBqy6+I8A3hw1hO6l34Q/ztdyJnxvgfJ1zw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatement$StmtExecOutParam
+ Handler.class
+SHA-256-Digest: RMWTWFpcfFB6FHQymDauMdbx41VZ2e9Sz1MNJ79sInQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDataSourceObjectFactory.cl
+ ass
+SHA-256-Digest: xnzdvjdOzEZY84EYdm5CFsi4rNvxnCo6rhBxjL8EQO4=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/LinkedDeque$2.class
+SHA-256-Digest: AI72qea4uXZqwKaSGdR25PIlvPi4/YAfVB8vhJ+yI5w=
+
+Name: com/microsoft/sqlserver/jdbc/AttestationProtocol.class
+SHA-256-Digest: JGjpKoFm6W1MTijWHbLuwfh+Ru4M3gWHwyJ/wv0SFUw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDataSource$SerializationPr
+ oxy.class
+SHA-256-Digest: a/gEwdf7+SFvYNBke7QWlR8IQzCv2lcXFMZB8G8tl6U=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerTokenIterator.class
+SHA-256-Digest: U85PQd63hwZ6mjGgRfiOQA9AOzB+f4VTEkJa9xwWy3Q=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerXAConnection.class
+SHA-256-Digest: /u0U+7ROOZkFtFjiWTsjlnIUoy1Di7IrKLHAu6fLoR8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_ru.class
+SHA-256-Digest: lR1d4fMJ3Yzbf/R5E1HS4gNLF5djg6Dac4Mj1P4n8v8=
+
+Name: com/microsoft/sqlserver/jdbc/StreamDone.class
+SHA-256-Digest: QdS6tBYk6hZAyj+upcSybtMy7UJc1OoWujvZ7k2kyYI=
+
+Name: com/microsoft/sqlserver/jdbc/ColumnEncryptionVersion.class
+SHA-256-Digest: khpvrPGHFFFr8C4tuGOVdaIvrZ4jMfJdcaSxoih1Pt8=
+
+Name: com/microsoft/sqlserver/jdbc/XMLTDSHeader.class
+SHA-256-Digest: aYuyqGc/rO6+5P1bci1ZdJ8CqA9JfYOvwwIBdL4gcLc=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$12.class
+SHA-256-Digest: 7YHKzJaB5E+yVxRCpvqInhrK92gn+W0RngJLyaS2quw=
+
+Name: com/microsoft/sqlserver/jdbc/IntColumnIdentityFilter.class
+SHA-256-Digest: awMO4qFBoiHrI0CiebMJxZ55W9WGYVa41aQrfY8qKkc=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo.class
+SHA-256-Digest: XAW+s6oRRIMp0jnJKx1sZrHKYJahDJUUIU2gmRIEpLs=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$6.class
+SHA-256-Digest: c2sPD8a7lO1IWk/GIADJlkTZsPy91aUcsKmDAv0Yk90=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$ProxyInputStream.class
+SHA-256-Digest: ChOu0uB7KfUQgVSrNWUudOG5VAayo0nu+rcoPIV2dbw=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $BoundedEntryWeigher.class
+SHA-256-Digest: GmnvaFRrqKv2sWJVojhNch4ZimCWwKq9jih7X4z3SNU=
+
+Name: com/microsoft/sqlserver/jdbc/ParameterUtils.class
+SHA-256-Digest: 3gXQJZCzpbdn2t2o4X4pvovqqOGUxhq+fV5NnOX6tww=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBlobOutputStream.class
+SHA-256-Digest: r8I0d/x+kTOUDi4nxnOi6BoKP2Hx2kHKbLGUrnYZ9gI=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement$PrepStmt
+ BatchExecCmd.class
+SHA-256-Digest: /KBdP17bJN3SwhbKNWfdRDrIagBJ2is2dgrbpJHIvSQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSpatialDatatype$1.class
+SHA-256-Digest: tHU/amE4MQKJQHHdayeGcN0FHZfgUdjWzBObr4bwGGQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$LogonCommand.cl
+ ass
+SHA-256-Digest: TxS1xqdJbwIhfUPqhbUyoucGIrsRtfPm3mllhCo0aMo=
+
+Name: com/microsoft/sqlserver/jdbc/BaseAttestationResponse.class
+SHA-256-Digest: ZbTfOXQRBPuOuz1HW9gXoSlEyzPgctAa+VEUgbdF44I=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $DrainStatus$1.class
+SHA-256-Digest: r4d+Fk25vqTono1R2cPrHuZAkbKfJK3HEEYgQSjIxqc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLJdbcVersion.class
+SHA-256-Digest: eVJBe1gnrwCGvT+rG1hHkKHv5L0sigkncmIZuY3vdxo=
+
+Name: com/microsoft/sqlserver/jdbc/DTV.class
+SHA-256-Digest: gJJ/y7rjJe8KkOhUqJ3QjbTKvtnM2r2H2wxyvGW+We0=
+
+Name: com/microsoft/sqlserver/jdbc/Geometry.class
+SHA-256-Digest: Yp5E5WFr0wCxDL+h0w2Bl6NQrJFhFrumDEX3wwoAXj0=
+
+Name: com/microsoft/sqlserver/jdbc/JDBCType$NormalizationAE.class
+SHA-256-Digest: yCzPXvnxpXONX5uUDPUKaZfhbm7fb8v0UA/CQFBwsTw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSavepoint.class
+SHA-256-Digest: BIunO196n5Wr11WaYXcu5+TwUvqDsZEg8Bkk+6SICjw=
+
+Name: com/microsoft/sqlserver/jdbc/TDSTokenHandler.class
+SHA-256-Digest: Xzs3ajOsMmQpm239aA9BEH77rU3yQvflORg9McmRNdw=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $Node.class
+SHA-256-Digest: Zocztvd/CSWi22mGmjTd4w5V38u92y+gEMfS019o1ZY=
+
+Name: com/microsoft/sqlserver/jdbc/UninterruptableTDSCommand.class
+SHA-256-Digest: GliO5Odl2u9KYeJU1nQZ8b7NI8bM3mB+HCilaRb/YkQ=
+
+Name: com/microsoft/sqlserver/jdbc/EnclaveType.class
+SHA-256-Digest: PMaFT4IUIcchT3qV1QI/TnrdcurPZwLrUa+FSJY1oY0=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$13.class
+SHA-256-Digest: /ga/v27GuUKkfFgmv1m1Qv884FEKHINjgqteGVGd7e8=
+
+Name: com/microsoft/sqlserver/jdbc/Parameter$1.class
+SHA-256-Digest: w/Jj+66Fzsw9rbD4aLekJlGKv58VpE2GuvLyZPWV1yc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$FetchBuffer$Fetc
+ hBufferTokenHandler.class
+SHA-256-Digest: 7m1LhC5s5yOe4/MvOKmpTfiZ0rcD6TEvQweXTx8muLk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$FetchBuffer.clas
+ s
+SHA-256-Digest: InE5Z1Bgo5r/P8RKemu2woBPXKghf1jBNGgvbNGaLGU=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $DrainStatus$3.class
+SHA-256-Digest: 4oWSwKshlsreDTD2oE/Nz8sEY0xZntoJP3VPs//VHrg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerEncryptionType.class
+SHA-256-Digest: tB606z22t7Sosr5NSN5KDgAa3nEbY2H5lhatltAmbJo=
+
+Name: com/microsoft/sqlserver/jdbc/CertificateDetails.class
+SHA-256-Digest: JQxsXd1MeSbg66nkzP4o58uUOrSvq0qQyB4RT1jIGmc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDriverStringProperty.class
+SHA-256-Digest: cq2IdlwI8Sys006al57IZBMFHZXPqLLyo9Vs0TZ4yAs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerVSMEnclaveProvider.class
+SHA-256-Digest: uJ4zDps0eq/VfCCcDxPges5WEFrU7278PNydsUS2qWQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerXADataSource$Serialization
+ Proxy.class
+SHA-256-Digest: GYsfyLt0EXdB+eiUcMTE01QXoUkaEtbsLcUNCX9N/Xc=
+
+Name: com/microsoft/sqlserver/jdbc/SSPIAuthentication$RealmValidator.c
+ lass
+SHA-256-Digest: IIDy9cVoWseVT93re4yz2RSs6FNSlVEjn/ozyQJMvkw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerEncryptionAlgorithmFactory
+ .class
+SHA-256-Digest: +tZft0t/75JhhSUUZG89ubHMfmsmp5xoCaXKz4VxQPU=
+
+Name: com/microsoft/sqlserver/jdbc/VSMAttestationResponse.class
+SHA-256-Digest: c0QH2KrI9GcWd8P4SqHjo0SZwHIclIHBoYThWbyiVww=
+
+Name: com/microsoft/sqlserver/jdbc/AASAttestationResponse.class
+SHA-256-Digest: wI6dOd9yvtttsH1SeJSxrglmo334CuWXypEvCU9+eVg=
+
+Name: com/microsoft/sqlserver/jdbc/ParsedSQLCacheItem.class
+SHA-256-Digest: HooO6r8OPCwsJAHWpjnG4SEL33h9+q+7+ES/3ZPXdDA=
+
+Name: com/microsoft/sqlserver/jdbc/SqlAuthentication.class
+SHA-256-Digest: ECxQ4/I6hxBTLig2ojQA2gztnpDVfD9xTmvXb8zZUUo=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$8.class
+SHA-256-Digest: LO4Q+RE50o23Brg90ynfSX/tpmpcPdfKO8aR8zQmbxM=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$CursorFetchComma
+ nd.class
+SHA-256-Digest: bX8LzS+7FS3MsLc7BCjBhWkBv1sK68YhzSq7pjHgMuE=
+
+Name: com/microsoft/sqlserver/jdbc/TVP$MPIState.class
+SHA-256-Digest: XWuvNQAWr70IXK3zBgJjNlip2dEx5Y92Rc8vUjSbj5M=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $Values.class
+SHA-256-Digest: LaxdOoWIissOwvN+IHlr8rjGcFipROtUzFhGJ3i20z4=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weigher.class
+SHA-256-Digest: bhOVP6MQcKVcl7Xpi+Rg8vFWrDj0dFswYYNyzdfz/fk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDataColumn.class
+SHA-256-Digest: OKDNevLkLuXrreK3mrZ6ORBpspBi1RvOjjbfmRFnhoU=
+
+Name: com/microsoft/sqlserver/jdbc/StreamRetValue.class
+SHA-256-Digest: Ygyz+nApQ3g3WEPH42RNpAHU9uE9BS5max/5AmKQzkQ=
+
+Name: com/microsoft/sqlserver/jdbc/sqlVariantProbBytes.class
+SHA-256-Digest: F733ZfebYmGfZFVyIsIAHyOvkaa3PSoyrLC20fumQCM=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1ServerCursorIni
+ tializer.class
+SHA-256-Digest: USgWsVp4BM9JIB9sh13+nqP0c1oKJatwg3HH3DAuEf8=
+
+Name: com/microsoft/sqlserver/jdbc/JaasConfiguration.class
+SHA-256-Digest: o4iWbdnCjbdfHpsltEpmUK+30cki+KfRXL0RLwRNAFA=
+
+Name: com/microsoft/sqlserver/jdbc/KeyStoreAuthentication.class
+SHA-256-Digest: 9Etw8bIobiB+Wav1Cn2ZsoTt2LkZMEm79kd4M8o64MY=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerResultSetMetaData.class
+SHA-256-Digest: xDLN4g6PXyY98j/aGbS4mk/utmWqRLy0yFnD+PYAnuY=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerPreparedStatement$1.class
+SHA-256-Digest: 3mFj7fUhO8cqHkutAM0DLsYqoX0m30WJREr6EmgSDmg=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $DiscardingQueue.class
+SHA-256-Digest: aDPTrd3iLvE79ZLYAqT9FIaHaqW3D8C7iQgY51MXrac=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_zh_TW.class
+SHA-256-Digest: LgW2laUTjp8e/oVAJOQl1G3s5XrSgkQO6ZGBlRRoCto=
+
+Name: com/microsoft/sqlserver/jdbc/DTV$SendByRPCOp.class
+SHA-256-Digest: qeIvSgRgxfa9EeJiUYW4kL1/fcqpup3AqAeYZQsqd5o=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCopy$1InsertBulk.class
+SHA-256-Digest: HJnQx1nbjYIA6BdMke4kpAPwHBMpYK40qGXhW+0LKwI=
+
+Name: com/microsoft/sqlserver/jdbc/SqlVariant.class
+SHA-256-Digest: /izziOAsKkUPtih07HNcRG2yTle6/mFSdtt4kFzhADU=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$9.class
+SHA-256-Digest: WJesgqIb1kQtv3G57RifdoZS3eqM0wXhwHU1zmQkYPk=
+
+Name: com/microsoft/sqlserver/jdbc/FedAuthDllInfo.class
+SHA-256-Digest: o9fquYqI4115qzXS/95vwtaemrVGXkzOh274MuQw9yo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1DeleteRowRPC.cl
+ ass
+SHA-256-Digest: 6z14rKiJ9TJWVRVxGyM/51xup4L1MQGifRY1qwthtoA=
+
+Name: com/microsoft/sqlserver/jdbc/TDSType.class
+SHA-256-Digest: x+feQ2g8Rizk+tMYMHZYgXjynzDIv8T7yTKqO7+EuY8=
+
+Name: com/microsoft/sqlserver/jdbc/spatialdatatypes/Shape.class
+SHA-256-Digest: sAfW/9z/z6rJb/+7o6rsdMpPyq+xo1hp9UJHD2NylWg=
+
+Name: com/microsoft/sqlserver/jdbc/spatialdatatypes/WKBPoint.class
+SHA-256-Digest: lvFfAkXj0YqlY653K+8ll+nrXT9rB9ZeYiGtZdn0/70=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerStatement$1NextResult.clas
+ s
+SHA-256-Digest: so49iqCeJwWwZGHc7HCEUYiLtcLBizaAoXApoBAvZkQ=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$SSLHandshakeInputStream.
+ class
+SHA-256-Digest: H6B3fecJAYrb/tP/zqXHiJvKKfdYeg59pR1MtjFMQrU=
+
+Name: com/microsoft/sqlserver/jdbc/dns/DNSRecordSRV.class
+SHA-256-Digest: PFn3J19OSovTppZhCLPWvzrVIvCQNzEjGH/G39Yhy+Y=
+
+Name: com/microsoft/sqlserver/jdbc/Parameter.class
+SHA-256-Digest: oGQgHL4oKcm2OIn8MTNfgCKC5z+CKs3GvoV6MyV/zAs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerXAResource.class
+SHA-256-Digest: qblNb15tOvQZKY39Y7lqmk+9IXzDrRso/5oJaXc1WMU=
+
+Name: com/microsoft/sqlserver/jdbc/TDSCommand.class
+SHA-256-Digest: eaDIHij9PWCnLPLxx8UdqG0hn+AYh0vGrC1URAJm0nI=
+
+Name: com/microsoft/sqlserver/jdbc/XAReturnValue.class
+SHA-256-Digest: Lj/QbELRdii3Dg2iQb4mak4Kck8xFqgRjNuT/s6hvNw=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$Strategy.class
+SHA-256-Digest: GH++h+k0plk2IQHZR43+stWBTYeb/D+2N4KfmAKaT9U=
+
+Name: com/microsoft/sqlserver/jdbc/SSType$Category.class
+SHA-256-Digest: 9FPYpN/r2vaYom0zcmsI9Pej1jSE7tBhWHnhD77kUK8=
+
+Name: com/microsoft/sqlserver/jdbc/UDTTDSHeader.class
+SHA-256-Digest: RiOL5OQQyEb5aCLqUBKo/yu20sMqcJd3LUPD4lpOzgM=
+
+Name: com/microsoft/sqlserver/jdbc/KeyVaultCustomCredentialPolicy.clas
+ s
+SHA-256-Digest: NaHJQz2m6HdOBnsyL7ymMmoQqqXXTirzckknrBSY58w=
+
+Name: com/microsoft/sqlserver/jdbc/ActivityId.class
+SHA-256-Digest: QGWxKTJqwzFqkJvbJBYwEr6hqmgSh8mMu7HpPWVsBfE=
+
+Name: com/microsoft/sqlserver/jdbc/dataclassification/SensitivityClass
+ ification$SensitivityRank.class
+SHA-256-Digest: lu6wRj9lwvyx+X/rKMoBgbPNhOyQGgKOuzsrIsSCxq8=
+
+Name: com/microsoft/sqlserver/jdbc/KeyVaultHttpPipelineBuilder.class
+SHA-256-Digest: MTX1iu6oL0ddKuzrdcaRjIWLD3dll2nWWdEIehiAFz8=
+
+Name: com/microsoft/sqlserver/jdbc/TypeInfo$Builder$14.class
+SHA-256-Digest: UL1SYdqa770KbpJkJgLqmX+xPVARfyMJb59eMvaRcss=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkCopyOptions.class
+SHA-256-Digest: BT85Np3tbkwOPSTaqQtUGhW3rOa4DmKO8y8lyPl+zh8=
+
+Name: com/microsoft/sqlserver/jdbc/SocketConnector.class
+SHA-256-Digest: 294EQSY+yijh41mrpWwzzyCl5cowOWFRSaERVCNHex8=
+
+Name: com/microsoft/sqlserver/jdbc/TVPType.class
+SHA-256-Digest: Fk9fm+XRtPhNlqtUWEYMwwP/MRe3QpvxlX9cZM9rjQc=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/LinkedDeque$1.class
+SHA-256-Digest: NgF/aiqM9IMKzLPK/6IzLo4K5h27kuedC+aGSS1kOEg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDataTable.class
+SHA-256-Digest: CmxDaz7CExfze+XPx35YLwuQzeHmWMN7x5OsduJ3Ap0=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerCallableStatement.class
+SHA-256-Digest: 7l8aBwcAEiSR0clWT6vsD+5e/Ay5rGCk7+xKHGHBoL0=
+
+Name: com/microsoft/sqlserver/jdbc/EnclaveCacheEntry.class
+SHA-256-Digest: iI1vbnCSxbNwZiXc/tPjlSRnx7+d47Qhz4MBumRW37o=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDriverPropertyInfo.class
+SHA-256-Digest: 5rMuLj7pgeA6XfJvomp6jiGneepFps8FU0amw3g5UE0=
+
+Name: com/microsoft/sqlserver/jdbc/Geography.class
+SHA-256-Digest: j3G5UvUhyP8dN7FaIcil1FmPAOFgjs7uoNaz7hvZlbA=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResultSet$1.class
+SHA-256-Digest: nW/VorNNUanLQVScPs92vKdDw7WzZ3PMA76sHDbA8Rs=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBlob.class
+SHA-256-Digest: t+0x0VrOaVaWFJQ3V7Ah6na/1hPkP+2YQD/5bmI3gCw=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $DiscardingListener.class
+SHA-256-Digest: AwcVEOc4w+vyzjebgguIAitvkHQ79WVVukj3lnWtNoY=
+
+Name: com/microsoft/sqlserver/jdbc/AppDTVImpl.class
+SHA-256-Digest: 2iIyWd/kQI9u6EAxodrxNXUZqIju5FxCr3kAE2fZGaY=
+
+Name: com/microsoft/sqlserver/jdbc/AuthenticationJNI.class
+SHA-256-Digest: 4k7fRG/DWyk0zTFCQxd9ZWcStTDSQPQh70SzSLrJjVg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerDatabaseMetaData$HandleAss
+ ociation.class
+SHA-256-Digest: ImCauAO9qRaus2+6rF6pcoYx0wdr6Y7kPJLQlLroj8A=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerMSAL4JUtils.class
+SHA-256-Digest: NhSS8MpbTnENxQAweec677U96EU3JXrCh0A9hrRn4UE=
+
+Name: com/microsoft/sqlserver/jdbc/dns/DNSKerberosLocator.class
+SHA-256-Digest: c76QSSgK9ePLBTW+PbTVkXRp6sWLFhZsI2w+ipQZaMs=
+
+Name: com/microsoft/sqlserver/jdbc/StreamSSPI.class
+SHA-256-Digest: TVHCVTUXHdFTmwcl6+VEHXDVuKAgfaM2mM1At7EG9cU=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $EntrySet.class
+SHA-256-Digest: Kec+rWMnmyY4gJ9klYo4y+BLBCSRTdfUMh1ULPGNXOM=
+
+Name: com/microsoft/sqlserver/jdbc/CryptoMetadata.class
+SHA-256-Digest: LlSzBOuy08AHg5Q8KifzLde1ishTTwOhOLQfVo+smT4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerBulkBatchInsertRecord.clas
+ s
+SHA-256-Digest: En8CygWASE3i6D9fFvz1RID9dDRl/tmrP+3xLgwLRPM=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$SetWeigher.cla
+ ss
+SHA-256-Digest: iNVZdiKRONWtGVffEgLqrdWp8whzw8xVnkhYztq9uX8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerColumnEncryptionAzureKeyVa
+ ultProvider.class
+SHA-256-Digest: u0hKVQUIoIlyzgFmxRZeecggV3XYxaTxgrYv8xfHtMQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSymmetricKeyCache.class
+SHA-256-Digest: vkOltKotbSB7qh3h0kAOH1F3+dK1zPzq5scxXoz/SkE=
+
+Name: com/microsoft/sqlserver/jdbc/ColumnFilter.class
+SHA-256-Digest: sLYNxm2ZCJAWIjyJSCalh5pIQuSAUh+o5vPZ13n/UUc=
+
+Name: com/microsoft/sqlserver/jdbc/SQLCollation$SortOrder.class
+SHA-256-Digest: +fP8X8apB4csBXTBoN7gNwwfFWdHk7tga9NIYU+zJF8=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnectionPoolDataSource$S
+ erializationProxy.class
+SHA-256-Digest: phhyQ+D4l4uBqFtk7/lJLailQ8oSpho1CqHC9pdStRc=
+
+Name: com/microsoft/sqlserver/jdbc/Parameter$GetTypeDefinitionOp.class
+SHA-256-Digest: gJmeVjkX8gsC5Y59WvFzOpJU4KPSwprG6DKp45Anyzw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_de.class
+SHA-256-Digest: JoyLg8er7iskGkanff5n3LrlPdEKXUd4WQPJyXpgUn4=
+
+Name: com/microsoft/sqlserver/jdbc/SQLCollation$WindowsLocale.class
+SHA-256-Digest: 5qf7s3LRBBIgCXcLmCqCXU3p59sEmDY/gYscpT957vw=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerParameterMetaData$QueryMet
+ a.class
+SHA-256-Digest: NNhARhgqJb97biwotQkvyAQ+MVMPU4wkY4GJOdZl/gs=
+
+Name: mssql/googlecode/cityhash/CityHash.class
+SHA-256-Digest: 4BpJHRCpV+ncL7da4FOlCeyoACMN1rF9c1/Z6RZsG7U=
+
+Name: com/microsoft/sqlserver/jdbc/AsciiFilteredUnicodeInputStream.cla
+ ss
+SHA-256-Digest: RmHOOly4NxE1ETHSb0gv0pAhgvWPIUj3nSbtXtCFZNg=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerSymmetricKey.class
+SHA-256-Digest: qYSbcWafd55AAkW2XEQu8sHcOdgE3yBL/5+kH60tyKw=
+
+Name: com/microsoft/sqlserver/jdbc/ScopeTokenCache.class
+SHA-256-Digest: 3NihHKtpps2r2/Ykh7DaZItErDc+4pN2fLOYD2fzDkY=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $ValueIterator.class
+SHA-256-Digest: DxXa4QaNgANkVv6HdUljJFxvejyDGaQ/xqrD3aqzCFo=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $SerializationProxy.class
+SHA-256-Digest: QVlG3yBUCMSI0qyhDwkLdX/FJDI49rzhjdiNMH2iG30=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$EntryWeigherVi
+ ew.class
+SHA-256-Digest: 9ABlgzNWvkPn7NKJwQe46EmnbWAvxMz+oiUsmIaWaK0=
+
+Name: com/microsoft/sqlserver/jdbc/DataTypeFilter.class
+SHA-256-Digest: LkLihE0IVaWGf7iTphwxYDu0clItQuOhDfeY4Z6McMo=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$CollectionWeig
+ her.class
+SHA-256-Digest: gg87IZdiMw/x0Ddi12tcGQJVf5VxnIQz4tHr/QDb6v0=
+
+Name: com/microsoft/sqlserver/jdbc/TDSTimeoutTask.class
+SHA-256-Digest: 3RB8+RpD923HNwmk33q9JXC9ElOQ4HIMZ8NprzH+9eA=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$ProxySocket.class
+SHA-256-Digest: cBPx1sEMCy/y7h6EVGRbrV8KylaVa/QzDgtuo78fXgA=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerResource_ja.class
+SHA-256-Digest: O2q9BhPIle5mPiwmkgiPzXkDympMn9a1nYD5lB97ehQ=
+
+Name: com/microsoft/sqlserver/jdbc/StringUtils.class
+SHA-256-Digest: AZbGayLW02lP7wOEZmrM9v8edFsj0VMn9T6KuVCQOoI=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerXADataSource.class
+SHA-256-Digest: k3y3LQR8Jnbuf4GPDS0fIYrJNRIYIcKg4KZHjzjquBQ=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$1LogonProcessor
+ .class
+SHA-256-Digest: 4NjgKsqxdg+9I8PKc7K+n51r2wNocBa6rh2H6F8bp1A=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/ConcurrentLinkedHashMap
+ $Builder.class
+SHA-256-Digest: Y90/Ki5MfZnEYjBebfE/q+VcgDlp7nvGbV8lEJNqiJA=
+
+Name: com/microsoft/sqlserver/jdbc/TVP$1.class
+SHA-256-Digest: oSVczax+Zj2rR8CHbJ9FO6ChQFssL5wU23rf69ZkgTs=
+
+Name: com/microsoft/sqlserver/jdbc/TDSChannel$PermissiveX509TrustManag
+ er.class
+SHA-256-Digest: 7bQnB0cBziZ6l7DWOrEdL0hFWjYgkR3MwP75Pi/kEYo=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerColumnEncryptionJavaKeySto
+ reProvider.class
+SHA-256-Digest: sS7ULBUmWMLvWgNaDMrmSJkie/r+FF+Tbzz8zhKZJno=
+
+Name: com/microsoft/sqlserver/jdbc/SSType$GetterConversion.class
+SHA-256-Digest: qV++1w3Ka2Ebi3JuesaL/wR2KIhb7JqdEoaZey7OzoU=
+
+Name: com/microsoft/sqlserver/jdbc/NTLMAuthentication$NTLMContext.clas
+ s
+SHA-256-Digest: pWobaCKd/y/Aat2giAi5Wsrs3rTgnqSFhBKaQR0pwLU=
+
+Name: com/microsoft/sqlserver/jdbc/KerbAuthentication$1.class
+SHA-256-Digest: DTD7FCXc2wGL5OQDYaCX4gCcX/XHGqAl688eS1AijJY=
+
+Name: com/microsoft/sqlserver/jdbc/SimpleInputStream.class
+SHA-256-Digest: WunkS7N/LXGCd2trdGe5NU4Qt+iiMeGbDG996G+eyBg=
+
+Name: com/microsoft/sqlserver/jdbc/IntColumnIdentityFilter$1.class
+SHA-256-Digest: l1xNxjYTkGk9ZKY1nnoIeW7zL4DYqPEfzklqBeZ8TAk=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerBulkRecord.class
+SHA-256-Digest: vcmyGzOgmt226g5ZhXVffR0AF997QL9hbSFHSdITfro=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerColumnEncryptionKeyStorePr
+ ovider.class
+SHA-256-Digest: yElX/QXUuAcfSWKBvck18/aaXLbuHqi0yY3t+k/ux3E=
+
+Name: com/microsoft/sqlserver/jdbc/KerbAuthentication.class
+SHA-256-Digest: 0m5tI0HUDoNMULAL2pemJ+pvXP5Lk2mnYS2wRmev1b4=
+
+Name: com/microsoft/sqlserver/jdbc/ISQLServerDataSource.class
+SHA-256-Digest: 786Q0XPu/IT4x+TJM6msbVFzXclZ7yvdEdCfRfSFe/M=
+
+Name: mssql/googlecode/concurrentlinkedhashmap/Weighers$SingletonEntry
+ Weigher.class
+SHA-256-Digest: e0oRq14CMn6wgLV5TiZI52/wZUt5nvArQZAN1e/eEjk=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerAASEnclaveProvider.class
+SHA-256-Digest: QaWe514uGXLCWvhysEBRZ8w1BUZJP1JWuMQHMN98SwI=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerConnection$ActiveDirectory
+ Authentication.class
+SHA-256-Digest: ZRuNaa18sUliSJjpHpn68uk9oMBIuW1hENE8mlLkxTA=
+
+Name: com/microsoft/sqlserver/jdbc/SQLServerParser.class
+SHA-256-Digest: /cK16sNYkM1gzq9esDUlN6BJhly+I6AvZKBq7kBaDTk=
+

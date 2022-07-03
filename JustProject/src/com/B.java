@@ -1,5 +1,6 @@
 package com;
-class A {
+
+abstract class A {
 	void xxx() {
 		System.out.println(1);
 
@@ -32,3 +33,4 @@ class B extends A {
 
 	}
 }
+
