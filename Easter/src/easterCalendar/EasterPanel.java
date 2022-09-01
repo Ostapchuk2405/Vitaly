@@ -1,28 +1,36 @@
 package easterCalendar;
 
-
 import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
- @SuppressWarnings("serial")
+@SuppressWarnings("serial")
 class EasterPanel extends JPanel {
 
-	 @Override
+	int x, y;
+
+	public EasterPanel(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+
+	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
-		Image image = null;
+
+		BufferedImage image = null;
 		try {
-			image = ImageIO.read(new File("resources\\Easter2.jpeg"));
+			image = ImageIO.read(new File("c:\\Users\\Admin\\Desktop\\JavaProjects\\Easter\\resources\\Easter2.jpeg"));
 		} catch (IOException e) {
-			System.out.println(e);
+			JOptionPane.showMessageDialog(null, "Ошибка при загрузке фонового изображения", "Ошибка", 0, null);
 		}
-		
-		g.drawImage(image, 0, 0, null);
+
+		g.drawImage(image, 0, 0, x, y, null);
 	}
 }

@@ -1,6 +1,5 @@
 package easterCalendar;
 
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -39,7 +38,6 @@ class CalendarFrame extends JFrame {
 	public CalendarFrame() {
 
 		dateEaster = Calendar.getInstance();
-
 		int a = year % 19;
 		int b = year % 4;
 		int c = year % 7;
@@ -47,36 +45,38 @@ class CalendarFrame extends JFrame {
 		int e = (2 * b + 4 * c + 6 * d + 6) % 7;
 		int f = d + e;
 
-
-
 		if (f <= 9)
 			dateEaster.set(year, Calendar.MARCH, 22 + f + 13);
 		else
 			dateEaster.set(year, Calendar.APRIL, f - 9 + 13);
-
 		currentEaster = dateEaster.get(Calendar.DAY_OF_MONTH);
+		DateFormat df = new SimpleDateFormat("dd MMMM yyyy");
 
-		DateFormat df = new SimpleDateFormat("MMMM yyyy");
+		setBounds(200, 200, 800, 600);
+		setResizable(true);
 
-		setBounds(200, 200, 750, 550);
-
+		setContentPane(new CalendarPanel());
 		Container contentPane = getContentPane();
-
+		
 		JPanel monthPanel = new JPanel();
-
+		monthPanel.setBackground(new Color(0, 0, 0, 0));
+		monthPanel.setOpaque(false);
+		
 		JButton menu = new JButton("Назад");
+		menu.setBackground(new Color(0, 0, 0, 0));
 		menu.addActionListener(listener);
 		monthPanel.add(menu);
 
-		JLabel monthAndYear = new JLabel();
-		monthAndYear.setText(df.format(dateEaster.getTime()));
-		monthAndYear.setFont(new Font("Arial", Font.BOLD, 24));
-		monthAndYear.setForeground(Color.RED);
-		monthAndYear.setBackground(Color.GREEN);
-		monthPanel.add(monthAndYear);
+		JLabel dater = new JLabel();
+		dater.setText(df.format(dateEaster.getTime()));
+		dater.setFont(new Font("Arial", Font.BOLD, 30));
+		dater.setForeground(Color.RED);
+		dater.setBackground(new Color(0, 0, 0, 0));
+		monthPanel.add(dater);
 		contentPane.add(monthPanel, BorderLayout.NORTH);
 
 		calendar = new JPanel();
+		calendar.setOpaque(false);
 
 		addButton("Пн", "days");
 		addButton("Вт", "days");
@@ -126,7 +126,7 @@ class CalendarFrame extends JFrame {
 				addButton(days + "", "");
 		}
 
-		calendar.setLayout(new GridLayout(0, 7));
+		calendar.setLayout(new GridLayout(0, 7, 10, 10));
 		contentPane.add(calendar, BorderLayout.CENTER);
 	}
 
@@ -134,22 +134,25 @@ class CalendarFrame extends JFrame {
 		JButton button = new JButton(label);
 		switch (how) {
 		case "blank":
-			button.setBackground(Color.WHITE);
+			button.setBackground(new Color(0, 0, 0, 0));
 			button.setEnabled(false);
 			break;
 		case "east":
 			button.setBackground(Color.PINK);
+			button.setFont(new Font("Ariel", Font.BOLD, 36));
 			button.setForeground(Color.GREEN);
 			button.setEnabled(false);
 			break;
 		case "days":
-			button.setBackground(Color.GREEN);
+			button.setBackground(Color.YELLOW);
+			button.setFont(new Font("Ariel", Font.BOLD, 30));
 			button.setForeground(Color.YELLOW);
 			button.setEnabled(false);
 			break;
 		case "":
 			button.setForeground(Color.BLACK);
-			button.setBackground(Color.YELLOW);
+			button.setFont(new Font("Ariel", Font.BOLD, 30));
+			button.setBackground(new Color(0, 0, 0, 0));
 			button.setEnabled(false);
 			break;
 		}

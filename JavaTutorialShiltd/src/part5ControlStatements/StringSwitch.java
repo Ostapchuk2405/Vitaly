@@ -4,7 +4,7 @@
 package part5ControlStatements;
 
 /**
- * Использования строки для контроля оператора
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  * 
  * @author Shiltd
  *
@@ -12,23 +12,23 @@ package part5ControlStatements;
 public class StringSwitch {
 
 	/**
-	 * @param args результат подходящий по свитчу
+	 * @param args пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	public static void main(String[] args) {
 
-		String str = "два";
+		String str = "one";
 		switch (str) {
-		case "один":
-			System.out.println("один");
+		case "one":
+			System.out.println("one");
 			break;
-		case "два":
-			System.out.println("два");
+		case "two":
+			System.out.println("two");
 			break;
-		case "три":
-			System.out.println("три");
+		case "three":
+			System.out.println("three");
 			break;
 		default:
-			System.out.println("нет соответствия");
+			System.out.println("There is no this number");
 		}
 	}
 
